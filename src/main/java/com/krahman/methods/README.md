@@ -27,4 +27,42 @@
     assertExpectedEqualsActual(A,B)
     - Three arguments is clearly a trouble - start making object that can carry the arguments
     - Varargs are one argument
- 5. No side effects
+ 5. No side effects - Write functions that only does what it intends to do. Naming a function as 
+    CheckPassword and then initializing the session inside this function will cause side effects. 
+    Consumers of this method will be unaware of this sideeffect.
+ 6. Command Query Separation: Functions should either do something or answer something, but not 
+    both. 
+     if(attributeExists(userName))
+     {
+        setAttribute(userName,value);
+     }
+ 7. Prefer Exception to returning error code
+    Returning error code will form a deeply nested structure. Where in, returning exception will 
+    help moving the exception handling code from functional code.
+    if(deletePage() == E_OK)
+    {
+      if(deleteReference() == E_OK)
+      {
+        if(deleteKey() == E_OF)
+        ...
+      }
+    }
+    
+    can be avoided if exceptions are used
+    try{
+    deletePage();
+    deleteReference();
+    deleteKey();
+    }
+    catch(Exception e){
+    }
+    
+ 8. Extract try/catch blocks - push the exception handling logic to its own method
+ 9. Error handling is one thing - a function handling exception should just do that. It should have 
+ try as first statement and nothing after catch/finally
+ 10. Don't repeat yourself - avoid duplicate code
+ 11. Structured programming - Every function, every block within a function should have only one 
+ entry and one exit. So no multi returns, break & continue and goto.
+ - But with small functions multi returns, break and continue are okay at times
+ - but never ever GOTO
+ 
