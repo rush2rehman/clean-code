@@ -1,4 +1,4 @@
-package successive_refactoring;
+package com.krahman.successive_refactoring;
 
 import java.util.ListIterator;
 

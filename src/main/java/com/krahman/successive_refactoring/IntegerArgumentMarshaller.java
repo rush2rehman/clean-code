@@ -1,6 +1,4 @@
-package successive_refactoring;
-
-import com.sun.org.apache.xpath.internal.Arg;
+package com.krahman.successive_refactoring;
 
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
