@@ -1,4 +1,4 @@
-package com.krahman;
+package com.krahman.cleancode;
 
 import static org.junit.Assert.assertTrue;
 

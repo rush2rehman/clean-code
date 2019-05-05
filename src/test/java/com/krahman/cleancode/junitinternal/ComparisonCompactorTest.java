@@ -1,4 +1,4 @@
-package com.krahman.junitinternal;
+package com.krahman.cleancode.junitinternal;
 
 import org.junit.Test;
 
